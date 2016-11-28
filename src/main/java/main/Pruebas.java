@@ -29,8 +29,6 @@ public class Pruebas {
 		//	Statement cn=(Statement) RT.var("grafterdatacube.core", "convertidor").invoke(ite.next());
 			//System.out.println(cn.getClass());
 		System.out.println(ite.next());
-		Statement st=(Statement) ite.next();
-		System.out.println(lazy.contains(st));
 		}
 	}
 	public boolean contieneStatement () throws IOException{

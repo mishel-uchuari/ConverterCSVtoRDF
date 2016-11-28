@@ -13,8 +13,7 @@ import main.Pruebas;
 public class ClojureTest {
 
 	public void test() throws IOException {
-		Pruebas p = new Pruebas();
-		Assert.assertTrue(p.contieneStatement());
+		Assert.assertEquals(new Pruebas().contieneStatement(), true);
 		
 	}
 
