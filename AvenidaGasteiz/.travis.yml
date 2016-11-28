@@ -1,0 +1,6 @@
+language:   
+ java
+script: mvn -Dtest=ClojureTest test
+jdk:
+- oraclejdk8
+- oraclejdk7

@@ -1,0 +1,2 @@
+cmdhistory=["lein grafter run AvenidaGasteiz.core/convert-data-to-graph ./data/AV._GASTEIZ.csv ./output/ataun-2014-2015.ttl" "(+ 4 9)"]
+eclipse.preferences.version=1
