@@ -7,7 +7,7 @@ import main.Pruebas;
 
 public class ClojureTest {
 
-	public void test() throws IOException {
+	public void testClojure() throws IOException {
 		
 		Assert.assertEquals(new Pruebas().contieneStatement(), true);
 	
