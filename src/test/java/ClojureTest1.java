@@ -1,7 +1,3 @@
-/*
- * 
- */
-
 
 import java.io.IOException;
 
@@ -9,7 +5,7 @@ import org.junit.Assert;
 
 import main.Pruebas;
 
-public class ClojureTest {
+public class ClojureTest1 {
 
 	public void test() throws IOException {
 		
