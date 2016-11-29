@@ -1,16 +1,11 @@
-/*
- * 
- */
-
 
 import java.io.IOException;
 
 import org.junit.Assert;
-import org.junit.experimental.categories.Category;
 
 import main.Pruebas;
 
-public class ClojureTest3 {
+public class ClojureTest {
 
 	public void test() throws IOException {
 		
