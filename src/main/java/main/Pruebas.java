@@ -37,7 +37,7 @@ public class Pruebas {
 		while(ite.hasNext()){
 			model.add((Statement)ite.next());
 			//System.out.println(ite.next().getClass());
-		//	Statement cn=(Statement) RT.var("grafterdatacube.core", "convertidor").invoke(ite.next());
+			//	Statement cn=(Statement) RT.var("grafterdatacube.core", "convertidor").invoke(ite.next());
 			//System.out.println(cn.getClass());
 		}
 		Rio.write(model, System.out, RDFFormat.RDFXML);
