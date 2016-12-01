@@ -39,6 +39,7 @@
            ;Nombre de la 
             (graph (base-graph "AV-GASTEIZ") 
               [observation-uri
+               [rdf:a qb:Observation]
                [base-Benceno (row "Benceno")]
                [base-CO (row "CO")]
                [base-CO8h (row "CO8h")] ;COMPROBAR LUEGO

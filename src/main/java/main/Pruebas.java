@@ -45,18 +45,13 @@ public class Pruebas {
 		//pM.testModel();
 	//	System.out.println(pM.testModel2());
 	}
-//	public boolean contieneStatement () throws IOException{
-//		RT.loadResourceScript("AvenidaGasteiz/main.clj");
-//		LazySeq lazy=(LazySeq)RT.var("AvenidaGasteiz.main", "convertidor")
-//				.invoke("./data/AV_GASTEIZ.csv");
-//		Iterator ite =  lazy.iterator();
-//		Statement st=(Statement) ite.next();
-////		while(ite.hasNext()){
-////			//System.out.println(ite.next().getClass());
-////		//	Statement cn=(Statement) RT.var("grafterdatacube.core", "convertidor").invoke(ite.next());
-////			//System.out.println(cn.getClass());
-////		System.out.println(ite.next());
-////		}
-//		return lazy.contains(st);
-//	}
+	public boolean contieneStatement () throws IOException{
+		RT.loadResourceScript("AvenidaGasteiz/main.clj");
+		LazySeq lazy=(LazySeq)RT.var("AvenidaGasteiz.main", "convertidor")
+				.invoke("./data/AV_GASTEIZ.csv");
+		Iterator ite =  lazy.iterator();
+		Statement st=(Statement) ite.next();
+
+		return lazy.contains(st);
+	}
 }

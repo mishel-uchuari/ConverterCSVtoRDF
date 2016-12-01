@@ -9,6 +9,6 @@
 
 (def base-id (prefixer (base-domain "/resource/")))
 
-(def base-element (prefixer (base-domain "/element/name/")))
+(def base-element (prefixer (base-domain "/element/")))
 
 (def base-sensor (prefixer (base-domain "/sensor/")))

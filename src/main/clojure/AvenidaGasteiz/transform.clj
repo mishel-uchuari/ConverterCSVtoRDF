@@ -66,7 +66,7 @@
 
 (defn base-data[a] 
   (base-domain 
-    (str "/AV-GASTEIZ/data/" a )))
+    (str "/AV-GASTEIZ/" a )))
   
 ;Conviertidor a Float o Integer
 (defmulti parseValue class)
