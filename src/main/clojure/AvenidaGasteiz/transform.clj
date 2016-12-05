@@ -65,7 +65,7 @@
      ))
    )
 
-(defn base-data[a] 
+(defn base-prefix[a] 
   (base-domain 
     (str "/AV-GASTEIZ/" a )))
   

@@ -26,7 +26,7 @@
 (def make-graph
  (graph-fn [{:keys [
     ;Datos String
-    observation-uri 
+    observation-Benceno
     Date base-date
     CO-8h-Air-Quality varCO8AQ-CAST ;Version Castellano-Euskera
     NO2-Air-Quality  varNO2AQ-CAST  ;Version Castellano-Euskera
@@ -42,7 +42,7 @@
             (graph (base-graph "AV-GASTEIZ") 
                 
                   
-              [observation-uri
+              ["http://purl.org/dc/terms/date"
                [base-Benceno (row "Benceno")]
                [base-CO (row "CO")]
                [base-CO8h (row "CO8h")] ;COMPROBAR LUEGO
@@ -65,11 +65,11 @@
                [base-ICAAQ  (removeSymbols (row "ICA-estacion"))]
                [base-ICAAQ (removeSymbols varICAE-CAST)]
                ]
-               ["http://purl.org/dc/terms/date"
-                [rdf:a rdf:Property]
+               [observation-Benceno
+                [rdf:a qb:Observation]
                 [rdfs:comment (->s (str "The date the data was taken" ))]
                 ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                    ]
+                   ]
              ))) 
              
   
@@ -124,7 +124,7 @@
           ;Version castellano
           :varICAE-CAST makeSplitEusk
           })
-      (derive-column :observation-uri [:Date] base-data)
+      (derive-column :observation-Benceno [:Benceno] base-prefix)
       (derive-column :base-date [:Date])
       ))
 
