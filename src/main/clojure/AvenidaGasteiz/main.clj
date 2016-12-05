@@ -9,6 +9,7 @@
             [grafter.rdf]
             [grafter.rdf.io :refer [IStatement->sesame-statement]]
             [grafter.rdf :refer [s]]
+            [grafter.vocabularies.qb :refer :all]
             [grafter.rdf.protocols :refer [->Quad]]
             [grafter.rdf.protocols :refer [ITripleWriteable]]
             [grafter.rdf.templater :refer [graph]]
@@ -25,7 +26,8 @@
 (def make-graph
  (graph-fn [{:keys [
     ;Datos String
-    observation-uri
+    observation-uri 
+    Date base-date
     CO-8h-Air-Quality varCO8AQ-CAST ;Version Castellano-Euskera
     NO2-Air-Quality  varNO2AQ-CAST  ;Version Castellano-Euskera
     PM10-Air-Quality varPM10AQ-CAST ;Version Castellano-Euskera
@@ -38,8 +40,9 @@
              :as row }]
            ;Nombre de la 
             (graph (base-graph "AV-GASTEIZ") 
+                
+                  
               [observation-uri
-               [rdf:a qb:Observation]
                [base-Benceno (row "Benceno")]
                [base-CO (row "CO")]
                [base-CO8h (row "CO8h")] ;COMPROBAR LUEGO
@@ -62,6 +65,11 @@
                [base-ICAAQ  (removeSymbols (row "ICA-estacion"))]
                [base-ICAAQ (removeSymbols varICAE-CAST)]
                ]
+               ["http://purl.org/dc/terms/date"
+                [rdf:a rdf:Property]
+                [rdfs:comment (->s (str "The date the data was taken" ))]
+                ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                    ]
              ))) 
              
   
@@ -116,7 +124,10 @@
           ;Version castellano
           :varICAE-CAST makeSplitEusk
           })
-      (derive-column :observation-uri [:Date] base-data)))
+      (derive-column :observation-uri [:Date] base-data)
+      (derive-column :base-date [:Date])
+      ))
+
 
 (defn convert-data-to-graph
   [dataset]

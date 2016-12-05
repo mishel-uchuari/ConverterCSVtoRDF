@@ -2,6 +2,7 @@
   (:require 
     [clojure.string :as str]
      [grafter.rdf.protocols :as pr]
+       [grafter.rdf :refer [prefixer s]]
     [AvenidaGasteiz.prefix :refer [base-id base-graph base-domain base-element]]
     )
 )
@@ -41,7 +42,7 @@
 (defn organizeDate [date]
   (when (seq date)
     (let [[d m y] (str/split date #"/")]
-      (apply str (interpose "-" [d m y])))))
+      (apply str (interpose "-" [d m y] )))))
 
 
 (defn removeSymbols
@@ -82,6 +83,10 @@
 
 (defn missing-data-filter [triples]
                                (remove #(nil? (pr/object %)) triples))
+(defn base-date[a] 
+    (str "/" a ))
+
+(defn ->s [st] (if st (s st) ""))
 
 (def base-CO8hAQ (base-element "CO-8h-Air-Quality"))
 (def base-NO2AQ (base-element "NO2-Air-Quality"))
