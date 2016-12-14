@@ -2,6 +2,7 @@
  * 
  */
 package main;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -28,42 +29,42 @@ import clojure.lang.RT;
  */
 
 public class Pruebas {
-	public static void main(String[] args) throws QueryEvaluationException, RepositoryException, MalformedQueryException, RDFHandlerException, IOException  {
-			RT.loadResourceScript("AvenidaGasteiz/main.clj");
-		
-		LazySeq lazy=(LazySeq)RT.var("AvenidaGasteiz.main", "convertidor")
-				.invoke("./data/AV_GASTEIZ.csv");
-		Iterator ite =  lazy.iterator();
+	public static void main(String[] args) throws QueryEvaluationException, RepositoryException,
+			MalformedQueryException, RDFHandlerException, IOException {
+		RT.loadResourceScript("AvenidaGasteiz/main.clj");
+
+		LazySeq lazy = (LazySeq) RT.var("AvenidaGasteiz.main", "convertidor").invoke("./data/AV_GASTEIZ.csv");
+		Iterator ite = lazy.iterator();
 		Model model = new LinkedHashModel();
 
-		while(ite.hasNext()){
-			model.add((Statement)ite.next());
-			//System.out.println(ite.next().getClass());
-			//	Statement cn=(Statement) RT.var("grafterdatacube.core", "convertidor").invoke(ite.next());
-			//System.out.println(cn.getClass());
+		while (ite.hasNext()) {
+			model.add((Statement) ite.next());
+			// System.out.println(ite.next().getClass());
+			// Statement cn=(Statement) RT.var("grafterdatacube.core",
+			// "convertidor").invoke(ite.next());
+			// System.out.println(cn.getClass());
 		}
-	/** Código para sacar el archivo RDF/XML-TURTLE
-	 *  	
-	 * */
-	 File file= new File("./data/archivoRDF.ttl");
+		/**
+		 * Código para sacar el archivo RDF/XML-TURTLE
+		 * 
+		 */
+		File file = new File("./data/archivoRDF.ttl");
 		FileOutputStream fileTurtle = new FileOutputStream(file);
 		Rio.write(model, fileTurtle, RDFFormat.RDFXML);
-		//PruebasModel pM = new PruebasModel(model);
-		//pM.testModel();
-	//	System.out.println(pM.testModel2());
+		// PruebasModel pM = new PruebasModel(model);
+		// pM.testModel();
+		// System.out.println(pM.testModel2());
 	}
-//	public boolean contieneStatement () throws IOException{
-//		RT.loadResourceScript("AvenidaGasteiz/main.clj");
-//		LazySeq lazy=(LazySeq)RT.var("AvenidaGasteiz.main", "convertidor")
-//				.invoke("./data/AV_GASTEIZ.csv");
-//		Iterator ite =  lazy.iterator();
-//		Statement st=(Statement) ite.next();
-//
-//		return lazy.contains(st);
-//	}
-/**
- * 
- */
+	// public boolean contieneStatement () throws IOException{
+	// RT.loadResourceScript("AvenidaGasteiz/main.clj");
+	// LazySeq lazy=(LazySeq)RT.var("AvenidaGasteiz.main", "convertidor")
+	// .invoke("./data/AV_GASTEIZ.csv");
+	// Iterator ite = lazy.iterator();
+	// Statement st=(Statement) ite.next();
+	//
+	// return lazy.contains(st);
+	// }
+	/**
+	 * 
+	 */
 }
-
-

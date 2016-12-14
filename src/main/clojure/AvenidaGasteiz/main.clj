@@ -6,9 +6,9 @@
                               read-datasets rows swap swap take-rows
                               test-dataset test-dataset ]]
             [grafter.pipeline :refer [declare-pipeline]]
-            [grafter.rdf]
-            [grafter.rdf.io :refer [IStatement->sesame-statement]]
-            [grafter.rdf :refer [s]]
+            [grafter.rdf :as rdf]
+            [grafter.rdf.io :as io]
+           ; [grafter.rdf :refer [xsd:dateTime]]
             [grafter.vocabularies.qb :refer :all]
             [grafter.rdf.protocols :refer [->Quad]]
             [grafter.rdf.protocols :refer [ITripleWriteable]]
@@ -21,13 +21,25 @@
             [AvenidaGasteiz.transform :refer :all]       
             [AvenidaGasteiz.prefix :refer :all]
             [clojure.string :as str]
-              ))
+              )
+     (:import (java.net URI URL)
+      [java.util Date])
+     )
+
+
 
 (def make-graph
  (graph-fn [{:keys [
-    ;Datos String
-    observation-Benceno
-    Date base-date
+   ;Datos observaciones
+   observation-CO
+    observation-Benceno observation-CO8h observation-C8hAQ 
+    observation-CO observation-CO8h 
+    observation-C8hAQ observation-Etilbenceno observation-NO
+    observation-NO2 observation-NO2AQ observation-NOX 
+    observation-Ortoxileno observation-PM10 observation-PM10AQ 
+    observation-PM25 observation-PM25AQ observation-Tolueno
+    observation-ICAAQ Date 
+     ;Datos String
     CO-8h-Air-Quality varCO8AQ-CAST ;Version Castellano-Euskera
     NO2-Air-Quality  varNO2AQ-CAST  ;Version Castellano-Euskera
     PM10-Air-Quality varPM10AQ-CAST ;Version Castellano-Euskera
@@ -40,36 +52,126 @@
              :as row }]
            ;Nombre de la 
             (graph (base-graph "AV-GASTEIZ") 
-                
-                  
-              ["http://purl.org/dc/terms/date"
-               [base-Benceno (row "Benceno")]
-               [base-CO (row "CO")]
-               [base-CO8h (row "CO8h")] ;COMPROBAR LUEGO
-               [base-CO8hAQ  (removeSymbols (row "CO-8h-Air-Quality"))]
-               [base-CO8hAQ  (removeSymbols varCO8AQ-CAST)]
-               [base-Etilbenceno (row "Etilbenceno")]
-               [base-NO (row "NO")]
-               [base-NO2 (row "NO2")]
-               [base-NO2AQ  (removeSymbols (row "NO2-Air-Quality"))]
-               [base-NO2AQ  (removeSymbols varNO2AQ-CAST)]
-               [base-NOX (row "NOX")]
-               [base-Ortoxileno (row "Ortoxileno")]
-               [base-PM10 (row "PM10")]
-               [base-PM10AQ  (removeSymbols (row "PM10-Air-Quality"))]
-               [base-PM10AQ  (removeSymbols varPM10AQ-CAST)]
-               [base-PM25 (row "PM25")]
-               [base-PM25AQ  (removeSymbols (row "PM25-Air-Quality"))]
-               [base-PM25AQ  (removeSymbols varPM25AQ-CAST)]
-               [base-Tolueno (row "Tolueno")]
-               [base-ICAAQ  (removeSymbols (row "ICA-estacion"))]
-               [base-ICAAQ (removeSymbols varICAE-CAST)]
-               ]
+             
                [observation-Benceno
                 [rdf:a qb:Observation]
-                [rdfs:comment (->s (str "The date the data was taken" ))]
-                ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 [rdfs:comment (langEn (str "The value of Benceno in a determinate date") )]
+                 ; ["http://purl.org/dc/terms/date"   (xsd:dateTime (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Benceno")]
                    ]
+                [observation-CO
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of CO in a determinate date") )]
+              ;   ["http://purl.org/dc/terms/date"   (io/s base-date)]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/mg.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "CO")]
+                   ]
+                [observation-CO8h
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of CO8h in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/mg.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "CO8h")]
+                   ]
+                [observation-C8hAQ
+                 [rdf:a qb:Observation]
+                 [rdfs:comment (langEn (str "CO Air Quality in a determinate date" ))]
+                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "CO-8h-Air-Quality")))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varCO8AQ-CAST))]
+                   ]
+                 [observation-Etilbenceno
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of Etilbenceno in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Etilbenceno")]
+                   ]
+                   [observation-NO
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of NO in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NO")]
+                   ]
+                    [observation-NO2
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of NO2 in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NO2")]
+                   ]
+                   [observation-NO2AQ
+                 [rdf:a qb:Observation]
+                 [rdfs:comment (langEn (str "NO2 Air Quality in a determinate date" ))]
+                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "NO2-Air-Quality")))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varNO2AQ-CAST))]
+                   ]
+                    [observation-NOX
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of NOX in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NOX")]
+                   ]
+                    [observation-Ortoxileno
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of Ortoxileno in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
+                   ]
+                   [observation-Ortoxileno
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of Ortoxileno in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
+                   ]
+                    [observation-PM10
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of PM10 in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "PM10")]
+                   ]   
+                  [observation-PM10AQ 
+                 [rdf:a qb:Observation]
+                 [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
+                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "PM10-Air-Quality")))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varPM25AQ-CAST))]
+                   ] 
+                   [observation-PM25
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of PM25 in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "PM25")]
+                   ]  
+                    [observation-PM25AQ 
+                 [rdf:a qb:Observation]
+                 [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
+                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "PM25-Air-Quality")))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varPM10AQ-CAST))]
+                   ] 
+                    [observation-Tolueno
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of Tolueno in a determinate date"))]
+               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Tolueno")]
+                   ]
+                    [observation-ICAAQ
+                 [rdf:a qb:Observation]
+                 [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
+                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "ICA-estacion")))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varICAE-CAST))]
+                   ] 
              ))) 
              
   
@@ -124,8 +226,22 @@
           ;Version castellano
           :varICAE-CAST makeSplitEusk
           })
-      (derive-column :observation-Benceno [:Benceno] base-prefix)
-      (derive-column :base-date [:Date])
+      (derive-column :observation-Benceno [:Date] base-Benceno)
+      (derive-column :observation-CO [:Date] base-CO)
+      (derive-column :observation-CO8h [:Date] base-CO8h)
+      (derive-column :observation-C8hAQ [:Date] base-CO8hAQ)
+      (derive-column :observation-Etilbenceno [:Date] base-Etilbenceno)
+      (derive-column :observation-NO [:Date] base-NO)
+      (derive-column :observation-NO2 [:Date] base-NO2)
+      (derive-column :observation-NO2AQ [:Date] base-NO2AQ)
+      (derive-column :observation-NOX [:Date] base-NOX)
+      (derive-column :observation-Ortoxileno [:Date] base-Ortoxileno)
+      (derive-column :observation-PM10 [:Date] base-PM10)
+      (derive-column :observation-PM10AQ [:Date] base-PM10AQ)
+      (derive-column :observation-PM25 [:Date] base-PM25)
+      (derive-column :observation-PM25AQ [:Date] base-PM25AQ)
+      (derive-column :observation-Tolueno [:Date] base-Tolueno)
+      (derive-column :observation-ICAAQ [:Date] base-ICAAQ)
       ))
 
 
@@ -139,4 +255,4 @@
 
 ;Convierte una IStatement en una statement Sesame
 (defn convertidor [is]
-  (map IStatement->sesame-statement (convert-data-to-graph is)))
+  (map io/IStatement->sesame-statement (convert-data-to-graph is)))

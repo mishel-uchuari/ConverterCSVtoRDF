@@ -7,8 +7,5 @@
 
 (def base-graph (prefixer (base-domain "/graph/")))
 
-(def base-id (prefixer (base-domain "/resource/")))
+(def base-value (prefixer (base-domain "/value/")))
 
-(def base-element (prefixer (base-domain "/element/")))
-
-(def base-sensor (prefixer (base-domain "/sensor/")))
