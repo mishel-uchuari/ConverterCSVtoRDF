@@ -7,5 +7,7 @@
 
 (def base-graph (prefixer (base-domain "/graph/")))
 
-(def base-value (prefixer (base-domain "/value/")))
+(def base-estacion (prefixer (base-domain "/estacion/")))
+
+(def base-medicion (prefixer (base-domain "/medicion/")))
 

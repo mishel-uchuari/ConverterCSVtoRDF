@@ -1,4 +1,4 @@
-(ns AvenidaGasteiz.main
+(ns AvenidaGasteiz.vitoriagasteiz
     (:require [grafter.tabular :refer [_ add-column add-columns apply-columns
                               build-lookup-table column-names columns
                               derive-column drop-rows graph-fn grep make-dataset
@@ -17,16 +17,13 @@
             [grafter.vocabularies.qb :refer :all]
             [grafter.pipeline :refer [declare-pipeline]]
             [grafter.vocabularies.rdf :refer :all]
-            [grafter.vocabularies.foaf :refer :all]
             [AvenidaGasteiz.transform :refer :all]       
             [AvenidaGasteiz.prefix :refer :all]
             [clojure.string :as str]
               )
-     (:import (java.net URI URL)
-      [java.util Date])
      )
 
-
+(pasoEstacion "AV-GASTEIZ")
 
 (def make-graph
  (graph-fn [{:keys [
@@ -38,7 +35,7 @@
     observation-NO2 observation-NO2AQ observation-NOX 
     observation-Ortoxileno observation-PM10 observation-PM10AQ 
     observation-PM25 observation-PM25AQ observation-Tolueno
-    observation-ICAAQ Date 
+    observation-ICAAQ Date dateValue
      ;Datos String
     CO-8h-Air-Quality varCO8AQ-CAST ;Version Castellano-Euskera
     NO2-Air-Quality  varNO2AQ-CAST  ;Version Castellano-Euskera
@@ -51,130 +48,145 @@
     ]
              :as row }]
            ;Nombre de la 
-            (graph (base-graph "AV-GASTEIZ") 
+            (graph (base-graph "AirQuality") 
              
                [observation-Benceno
                 [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "The value of Benceno in a determinate date") )]
-                 ; ["http://purl.org/dc/terms/date"   (xsd:dateTime (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Benceno")]
                    ]
                 [observation-CO
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of CO in a determinate date") )]
-              ;   ["http://purl.org/dc/terms/date"   (io/s base-date)]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/mg.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "CO")]
                    ]
                 [observation-CO8h
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of CO8h in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/mg.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "CO8h")]
                    ]
                 [observation-C8hAQ
                  [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "CO Air Quality in a determinate date" ))]
-                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "CO-8h-Air-Quality")))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varCO8AQ-CAST))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "CO-8h-Air-Quality"))))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str (removeSymbols varCO8AQ-CAST)))]
                    ]
                  [observation-Etilbenceno
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of Etilbenceno in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Etilbenceno")]
                    ]
                    [observation-NO
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of NO in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NO")]
                    ]
                     [observation-NO2
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of NO2 in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NO2")]
                    ]
                    [observation-NO2AQ
                  [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "NO2 Air Quality in a determinate date" ))]
-                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "NO2-Air-Quality")))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varNO2AQ-CAST))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "NO2-Air-Quality"))))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str (removeSymbols varNO2AQ-CAST)))]
                    ]
                     [observation-NOX
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of NOX in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "NOX")]
                    ]
                     [observation-Ortoxileno
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of Ortoxileno in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
                    ]
                    [observation-Ortoxileno
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of Ortoxileno in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
                    ]
                     [observation-PM10
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of PM10 in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "PM10")]
                    ]   
                   [observation-PM10AQ 
                  [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
-                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "PM10-Air-Quality")))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varPM25AQ-CAST))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "PM10-Air-Quality"))))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str (removeSymbols varPM25AQ-CAST)))]
                    ] 
                    [observation-PM25
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of PM25 in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "PM25")]
                    ]  
                     [observation-PM25AQ 
                  [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
-                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "PM25-Air-Quality")))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varPM10AQ-CAST))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "PM25-Air-Quality"))))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str (removeSymbols varPM10AQ-CAST)))]
                    ] 
                     [observation-Tolueno
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of Tolueno in a determinate date"))]
-               ; ["http://purl.org/dc/terms/date"   (io/s (row "Date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Tolueno")]
                    ]
                     [observation-ICAAQ
                  [rdf:a qb:Observation]
                  [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
-                ; ["http://purl.org/dc/terms/date" (->s (str base-date ))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (row "ICA-estacion")))]
-                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str varICAE-CAST))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "ICA-estacion"))))]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langSp (str (removeSymbols varICAE-CAST)))]
                    ] 
              ))) 
-             
-  
 			   
 (defn convert-data-to-data
   [data-file]
@@ -226,6 +238,7 @@
           ;Version castellano
           :varICAE-CAST makeSplitEusk
           })
+      (derive-column :dateValue [:Date] dateTime)
       (derive-column :observation-Benceno [:Date] base-Benceno)
       (derive-column :observation-CO [:Date] base-CO)
       (derive-column :observation-CO8h [:Date] base-CO8h)

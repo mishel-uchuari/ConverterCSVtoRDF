@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/3-DE-MARZO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.667784995</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.85604797</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-Tres-de-Marzo-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Vitoria-Gasteiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ABANTO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.074155996</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.32047399</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-del-Minero-2-Ayuntamiento</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Abanto y Ci�rvana-Abanto Zierbena</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/AGURAIN">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.39370339</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.84901251</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Fueros-11-Subcomisar�a-de-la-Ertzaintza</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Salvatierra/Agurain</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ALGORTA-BBIZI2">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.022782207</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.36205575</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Carretera-de-Galea-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Getxo</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ALONSOTEGI">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.988024</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.247568</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Baztieta-s-n-B�-Irauregi</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Alonsotegi</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ARRAIZ-Monte">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.960475857</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.24555373</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Camino-de-Arraiz-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ATEGORRIETA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.960650618</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.32199195</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-Ategorrieta-71</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Donostia / San Sebasti�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/AV-GASTEIZ">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.680709822</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.85478118</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-Gasteiz-97</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Vitoria-Gasteiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/AVDA-TOLOSA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.010938424</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.30941344</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Andrestegi-2</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Donostia / San Sebasti�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/AZPEITIA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.268210419</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.18037005</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Perdillegi-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Azpeitia</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/A�ORGA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.995741147</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.29053139</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-de-A�orga-12-A�orga-Txiki</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Donostia / San Sebasti�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/BANDERAS-meteo">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.953278417</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.28099012</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Monte-Banderas-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/BARAKALDO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.987133</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.298379</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Hogar-propio-7-CIFP-Nicol�s-Larburu</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Barakaldo</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/BASAURI">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.883761023</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.2411313</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Uribarri-5-CEIP-Bizkotxalde</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Basauri</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/BEASAIN">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.19138027</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.04809432</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-Gipuzkoa-1</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Beasain</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/BOROA-METEO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.750687431</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.2359046</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Parque-Empresarial-Boroa-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Amorebieta-Etxano</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/CASTREJANA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.973456591</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.25807943</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Larrazabal-1-B�-Castrejana</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Barakaldo</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/DURANGO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.637958001</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.168286</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-San-Roque-20-bajo-ES-Roque</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Durango</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/EASO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.980900864</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.31215281</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-del-Centenario-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Donostia / San Sebasti�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ELCIEGO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.619475212</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.51824807</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Gabriel-Celaya-8</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Elciego</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ERANDIO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.977239986</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.30265263</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-Jos�-Luis-Goyoaga-s-n-Pasaje-de-Altzaga</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Erandio</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/EUROPA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.902376116</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.25491057</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Parque-Europa-B�-Txurdinaga</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/FARMACIA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.672563184</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.84009962</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Paseo-Universidad-7-Fac-Farmacia-UPV</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Vitoria-Gasteiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/FERIA-meteo">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.947544</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.265222</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Rafael-Moreno-Pitxitxi-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/HERNANI">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.97771564</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.26743142</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Aristizabal-s-n-Centro-de-salud-Hernani</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Hernani</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/JAIZKIBEL">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.859412903</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.34277518</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Monte-Jaizkibel-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Hondarribia</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/LARRABETZU">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.799399084</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.26122612</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Barrio-Berrezoaga-3</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Larrabetzu</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/LAS-CARRERAS">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.097397506</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.31960313</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-Trinidad-s-n-B�-Las-Carreras</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Abanto y Ci�rvana-Abanto Zierbena</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/LEZO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.90013105</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.32152244</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-Polantzarene-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Lezo</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/LLODIO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.963385282</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.14402894</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Lamuza-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Laudio/Llodio</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/LOS-HERRAN">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.661230557</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.84370296</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Parque-Judizmendi-B�-Judizmendi</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Vitoria-Gasteiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MAZARREDO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.93518811</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.26750551</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Alameda-Mazarredo-s-n-Guggenheim</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MONDRAGON">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.490396683</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.06412079</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Plaza-Jose-Mar�a-Arizmendiarrieta-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Arrasate/Mondrag�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MONTORRA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.716588507</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.20901422</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Barrio-Montorra-fte-n�5</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Amorebieta-Etxano</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MUNDAKA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.703159368</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.40588884</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Camino-Goitiz-s-n-Dep�sito-de-Agua</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Mundaka</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MUNOA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.978696001</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.285588</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Llano-55-CEP-Munoa-B�-Lutxana</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Barakaldo</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/MUSKIZ">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.112716272</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.32071312</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Giba-Fregenal-s-n-Estaci�n-de-Renfe</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Muskiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/M�-DIAZ-HARO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.945656664</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.25880287</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-M�-D�az-de-Haro-60</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Bilbao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/NAUTICA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.023333334</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.32694444</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-M�-D�az-de-Haro-68-Esc-N�utica</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Portugalete</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/PAGOETA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.154887397</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.25060522</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Jard�n-Bot�nico-de-Iturraran-Parque-Natural-de-Pagoeta</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Aia</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/PUYO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-1.984011286</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.30277717</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Camino-de-Puyo-14</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Donostia / San Sebasti�n</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/SAN-JULIAN">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.11299477</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.33265016</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Camino-a-Valles-s-n-B�-San-Julian</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Muskiz</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/SANGRONIZ">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.930385818</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.29842136</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Iturrikosolo-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Sondika</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/SANTURCE">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.04256</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.333012</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">C-Vista-Alegre-29</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Santurtzi</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/SERANTES">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.06299057</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.33443671</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Camino-Serantes-igoera-s-n</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Santurtzi</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/SESTAO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.99594962</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.3077261</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Parque-Portopin</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Sestao</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/TOLOSA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.078002157</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.13078068</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-Martin-Jose-Iraola-23</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Tolosa</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/URKIOLA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.650870072</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.10044243</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Urkiola-auzoa-8</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Abadi�o</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/VALDEREJO">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.231732505</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.87516709</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Ctro-de-Interpretaci�n-Parque-Natural-de-Valderejo</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Valdegov�a/Gaubea</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Araba/�lava</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ZALLA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.134461259</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.21285724</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Avda-Kosme-Bibanko-Etxebarria-2</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Zalla</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ZELAIETA-PARQUE">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.73449698</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.21890568</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Parque-Zelaieta</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Amorebieta-Etxano</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ZIERBENA-Puerto">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.080988277</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.35305543</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Puerto-de-Zierbena-s-n-B�-El-Puerto</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Zierbena</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Bizkaia</addressRegion>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendata.euskadi.eus/estacion/ZUMARRAGA">
+	<rdf:type rdf:resource="http://schema.org/Place"/>
+	<long xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-2.316228856</long>
+	<lat xmlns="http://www.w3.org/2003/01/geo/wgs84_pos#" rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.08507598</lat>
+	<address xmlns="http://schema.org/" xml:lang="es">Grupo-Izazpi-3-6</address>
+	<addressLocality xmlns="http://schema.org/" xml:lang="es">Zumarraga</addressLocality>
+	<addressRegion xmlns="http://schema.org/" xml:lang="es">Gipuzkoa</addressRegion>
+</rdf:Description>
+
+</rdf:RDF>

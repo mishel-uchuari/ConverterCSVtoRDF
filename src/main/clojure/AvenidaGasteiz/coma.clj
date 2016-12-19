@@ -4,7 +4,7 @@
 
 
 
-(defn pruebas [datos]
+(defn quitarComas[datos]
   
 (def s (slurp datos))
 (def sr (clojure.string/replace s "," "."))
@@ -14,7 +14,6 @@
 
 (spit datos sj)
 )
-
 
 ;
 ;
