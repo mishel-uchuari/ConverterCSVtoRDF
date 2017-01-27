@@ -1,5 +1,6 @@
-(ns AvenidaGasteiz.vitoriagasteiz
-    (:require [grafter.tabular :refer [_ add-column add-columns apply-columns
+(ns AvenidaGasteiz.metadatos
+  
+   (:require [grafter.tabular :refer [_ add-column add-columns apply-columns
                               build-lookup-table column-names columns
                               derive-column drop-rows graph-fn grep make-dataset
                               mapc melt move-first-row-to-header read-dataset
@@ -23,7 +24,6 @@
               )
      )
 
-(pasoEstacion "AV-GASTEIZ")
 
 (def make-graph
  (graph-fn [{:keys [
@@ -130,6 +130,14 @@
                  ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
                    ]
+                   [observation-Ortoxileno
+                 [rdf:a qb:Observation]
+                 [rdfs:comment  (langEn (str "The value of Ortoxileno in a determinate date"))]
+                 ["http://purl.org/dc/terms/date" dateValue]
+                 ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
+                 ["http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure" "http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3"]
+                 ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (row "Ortoxileno")]
+                   ]
                     [observation-PM10
                  [rdf:a qb:Observation]
                  [rdfs:comment  (langEn (str "The value of PM10 in a determinate date"))]
@@ -172,7 +180,7 @@
                    ]
                     [observation-ICAAQ
                  [rdf:a qb:Observation]
-                 [rdfs:comment (langEn (str "ICA estacion Air Quality in a determinate date" ))]
+                 [rdfs:comment (langEn (str "PM10 Air Quality in a determinate date" ))]
                  ["http://purl.org/dc/terms/date" dateValue]
                  ["http://www.w3.org/2003/01/geo/wgs84_pos#location" "http://opendata.euskadi.eus/estacion/AV-GASTEIZ"]
                  ["http://purl.org/linked-data/sdmx/2009/measure#obsValue" (langVq (str (removeSymbols (row "ICA-estacion"))))]
